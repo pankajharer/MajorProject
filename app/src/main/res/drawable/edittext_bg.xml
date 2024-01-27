@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- res/drawable/edittext_bg.xml -->
+    <shape xmlns:android="http://schemas.android.com/apk/res/android">
+        <solid android:color="#ffffff" />
+        <corners android:radius="8dp" />
+        <stroke
+            android:color="@color/colorAccent"
+            android:width="2dp" />
+    </shape>
+
+
+</selector>
