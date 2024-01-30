@@ -2,6 +2,7 @@ package com.example.majorproject1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -52,10 +53,8 @@ public class UserInfo extends AppCompatActivity {
         String gender = selectedGenderRadioButton.getText().toString();
 
         if (validateInputs(name, age, weight, gender)) {
-            ConnectionHelper con = new ConnectionHelper(this);
 
-            // Step 1: Add user and get user ID
-            // Retrieve the username from shared preferences
+            ConnectionHelper con = new ConnectionHelper(this);
             String savedUsername = getUsernameFromPreferences();
 
             ConnectionHelper con1 = new ConnectionHelper(this);
@@ -64,12 +63,14 @@ public class UserInfo extends AppCompatActivity {
 
 
             if (userId != -1) {
-                // Step 2: If user was added successfully, insert details into user_info table
+
                 boolean success = con.addUserInfo(userId, name, age, weight, gender);
 
                 if (success) {
                     // Display a toast message
                     Toast.makeText(this, "Details saved successfully", Toast.LENGTH_SHORT).show();
+                    Intent intent =new Intent(UserInfo.this,DBType.class);
+                    startActivity(intent);
                 } else {
                     // Display an error message
                     Toast.makeText(this, "Failed to save details", Toast.LENGTH_SHORT).show();

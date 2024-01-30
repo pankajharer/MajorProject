@@ -5,24 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/infoback"
     tools:context=".UserInfo">
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/app_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true"
-        android:theme="@style/AppTheme.AppBarOverlay"
-        android:background="@drawable/centre_background">
-    </com.google.android.material.appbar.AppBarLayout>
-
 
     <TextView
         android:id="@+id/welcomeMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+
         android:textSize="24sp"
         android:textColor="@android:color/black"
         android:textStyle="bold" />
@@ -48,9 +39,9 @@
         android:id="@+id/enterDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/app_bar"
+
         android:layout_marginStart="32dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="32dp"
         android:gravity="center"
         android:text="Enter Details"
@@ -105,18 +96,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Male"
-            android:layout_marginStart="90dp"
+            android:textStyle="bold"
+            android:layout_marginStart="70dp"
             android:textColor="@color/colorPrimary"
-            android:textSize="18sp" />
+            android:textSize="22sp" />
 
         <RadioButton
             android:id="@+id/radioButtonFemale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Female"
+            android:textStyle="bold"
             android:layout_marginStart="40dp"
             android:textColor="@color/colorPrimary"
-            android:textSize="18sp" />
+            android:textSize="22sp" />
 
     </RadioGroup>
 
