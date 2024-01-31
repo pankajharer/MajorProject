@@ -5,8 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/infoback"
+    android:background="@color/white"
     tools:context=".UserInfo">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="match_parent"
+        android:layout_height="149dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/top_login" />
 
     <TextView
         android:id="@+id/welcomeMessage"
@@ -24,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_below="@+id/enterDetails"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
         android:background="@android:drawable/editbox_background"
@@ -39,9 +46,9 @@
         android:id="@+id/enterDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:layout_below="@+id/imageView6"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="0dp"
         android:layout_marginEnd="32dp"
         android:gravity="center"
         android:text="Enter Details"
@@ -119,7 +126,7 @@
         android:layout_height="60dp"
         android:layout_below="@+id/Gender"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="66dp"
+        android:layout_marginTop="50dp"
         android:backgroundTint="@color/colorAccent"
         android:text="Save"
         android:textColor="@android:color/white"

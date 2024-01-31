@@ -1,19 +1,19 @@
 package com.example.majorproject1;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.SharedPreferences;
-import android.database.sqlite.SQLiteOpenHelper;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Window;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -31,14 +33,10 @@ public class MainActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
-        //Fetching Data
         usernameEditText = findViewById(R.id.username);
         passwordEditText = findViewById(R.id.pass);
         Button loginButton = findViewById(R.id.btnlogin);
-        Button signup=findViewById(R.id.signup);
-
-
-
+        TextView signup=findViewById(R.id.signup);
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override

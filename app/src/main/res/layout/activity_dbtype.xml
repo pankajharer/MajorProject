@@ -4,16 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/infoback"
+    android:background="@color/white"
     tools:context=".DBType">
 
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="match_parent"
+            android:layout_height="149dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/top_login" />
         <TextView
             android:id="@+id/textView"
-
+            android:layout_below="@+id/imageView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="16dp"
             android:text="Select Your Type of Diabetes:"
             android:textColor="@color/colorPrimary"
@@ -27,7 +33,7 @@
             android:layout_below="@id/textView"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="70dp"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="100dp"
             android:background="@android:drawable/btn_dropdown"/>
 
         <Button

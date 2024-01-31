@@ -83,7 +83,7 @@
         android:layout_height="230dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="5dp"
-        android:background="@color/Blue" />
+        android:background="@color/purple_light" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -281,3 +281,5 @@
     </RelativeLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>
+
+
