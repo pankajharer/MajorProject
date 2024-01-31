@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:id="@+id/drawlayout"
+    android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
     tools:openDrawer="start"
     android:fitsSystemWindows="true"
     tools:context=".HomePage">
@@ -18,7 +17,39 @@
         android:id="@+id/navigationview"
         app:headerLayout="@layout/headerfile"
         app:menu="@menu/sidemenu"
-        android:layout_gravity="start" />
+        android:layout_gravity="start" >
+
+    </com.google.android.material.navigation.NavigationView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Your BottomNavigationView should be directly inside CoordinatorLayout -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_navmenu" />
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:fabCradleMargin="10dp"
+            app:fabCradleRoundedCornerRadius="50dp">
+
+            <!-- Other BottomAppBar configurations -->
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <!-- The rest of your layout -->
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 
 
 <LinearLayout
@@ -166,6 +197,7 @@
         android:layout_height="170dp"
         android:layout_below="@+id/linear"
         android:orientation="horizontal"
+        android:id="@+id/linear2"
         android:background="@color/white"
         android:padding="10dp">
 
@@ -243,5 +275,9 @@
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
-</RelativeLayout>
+
+
+
+    </RelativeLayout>
+
 </androidx.drawerlayout.widget.DrawerLayout>
