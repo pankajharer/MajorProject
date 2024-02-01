@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="timing_array">
+        <item>Fasting</item>
+        <item>Postprandial</item>
+        <item>Preprandial</item>
+        <item>Bedtime</item>
+        <item>HbA1c</item>
+        <item>Random</item>
+    </string-array>
+</resources>

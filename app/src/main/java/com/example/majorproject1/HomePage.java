@@ -54,9 +54,8 @@ public class HomePage extends AppCompatActivity {
         diabeticsCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle click on Diabetics Prediction
-                Toast.makeText(HomePage.this, "Diabetics Prediction Clicked", Toast.LENGTH_SHORT).show();
-                // Add your logic here
+                Intent intent=new Intent(HomePage.this,Prediction.class);
+                startActivity(intent);
             }
         });
 
