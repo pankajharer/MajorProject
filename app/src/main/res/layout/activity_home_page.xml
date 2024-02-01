@@ -25,7 +25,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- Your BottomNavigationView should be directly inside CoordinatorLayout -->
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigationView"
             android:layout_width="match_parent"
@@ -60,9 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
-
-            >
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
 
         </androidx.appcompat.widget.Toolbar>
 

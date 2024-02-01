@@ -13,6 +13,7 @@
         android:layout_height="149dp"
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/top_login" />
+
     <TextView
         android:id="@+id/sign"
         android:layout_width="match_parent"

@@ -1,18 +1,23 @@
 package com.example.majorproject1;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
 public class HomePage extends AppCompatActivity {
@@ -79,6 +84,31 @@ public class HomePage extends AppCompatActivity {
                 // Handle click on Classify
                 Toast.makeText(HomePage.this, "Classify Clicked", Toast.LENGTH_SHORT).show();
                 // Add your logic here
+            }
+        });
+
+        //Bottom Menu
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                    int itemId = item.getItemId();
+
+                    if (itemId == R.id.homeitem) {
+
+                        return true;
+                    } else if (itemId == R.id.bellitem) {
+                        Intent intent =new Intent(HomePage.this,notifications_Activity.class);
+                        startActivity(intent);
+                        return true;
+                    } else if (itemId == R.id.profileitem) {
+                        Intent intent1 =new Intent(HomePage.this,UserProfile.class);
+                        startActivity(intent1);
+                        return true;
+                    }
+                    return false;
             }
         });
     }
