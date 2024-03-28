@@ -5,7 +5,7 @@
         android:id="@+id/homeitem"
         android:icon="@drawable/baseline_home_24"
         />
-    <item android:title="Notification"
+    <item android:title="Reminder"
         android:id="@+id/bellitem"
         android:icon="@drawable/baseline_notifications_24"
         />

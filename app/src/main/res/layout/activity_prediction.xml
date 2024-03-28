@@ -4,33 +4,58 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".Prediction">
+    tools:context=".Prediction"
+    android:background="@color/white">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/Blue"
+
+
+        android:textSize="18sp" />
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="70dp"
+    android:background="@android:drawable/editbox_background"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:textColor="@color/black"
+    android:textStyle="bold"
     android:text="Enter Blood Glucose Level:"
     android:textSize="18sp" />
 
 <EditText
     android:id="@+id/editTextGlucoseLevel"
     android:layout_width="match_parent"
+    android:padding="16dp"
     android:layout_height="50dp"
+    android:background="@android:drawable/editbox_background"
+    android:textColor="@color/colorPrimaryDark"
+    android:textStyle="bold"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
     android:hint="Blood Glucose Level"
     android:inputType="numberDecimal" />
 
 <TextView
     android:layout_width="150dp"
+    android:textColor="@color/black"
+    android:textStyle="bold"
     android:layout_height="40dp"
     android:layout_marginTop="40dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
     android:text="Select Timing:"
     android:textSize="18sp" />
 
 <Spinner
     android:id="@+id/spinnerTiming"
     android:layout_width="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
     android:layout_height="50dp"
     android:entries="@array/timing_array" />
 
@@ -38,6 +63,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
         android:text="Enter Insulin Level:"
         android:textSize="18sp" />
 
@@ -45,6 +74,11 @@
         android:id="@+id/insulin"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:background="@android:drawable/editbox_background"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:hint="Insulin"
         android:inputType="numberDecimal" />
 
@@ -52,6 +86,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
         android:text="Enter BMI"
         android:textSize="18sp" />
 
@@ -59,6 +97,11 @@
         android:id="@+id/BMI"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:drawable/editbox_background"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
         android:hint="BMI"
         android:inputType="numberDecimal" />
 

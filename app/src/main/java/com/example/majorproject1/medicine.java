@@ -11,30 +11,38 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.util.Log;
+import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
 import android.widget.Toast;
-
-import androidx.annotation.RequiresApi;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationView;
+import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationManagerCompat;
 import java.util.Calendar;
 import java.util.Date;
 
 
-public class medicine extends AppCompatActivity {
+public class medicine extends AppCompatActivity{
         private static final String CHANNEL_ID = "channel1";
         private static final int NOTIFICATION_ID = 121;
         private EditText titleEditText, messageEditText;
         private TimePicker timePicker;
         private DatePicker datePicker;
 
+        NavigationView navigationView;
+
         @RequiresApi(api = Build.VERSION_CODES.O)
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
+            requestWindowFeature(Window.FEATURE_NO_TITLE);
+            this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
             setContentView(R.layout.activity_medicine);
 
             createNotificationChannel();
@@ -57,6 +65,7 @@ public class medicine extends AppCompatActivity {
                 }
             });
         }
+
 
         @SuppressLint("UnspecifiedImmutableFlag")
         private void scheduleNotification() {
@@ -141,4 +150,24 @@ public class medicine extends AppCompatActivity {
             }
             return true;
         }
+
+   /* BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView2);
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+            int itemId = item.getItemId();
+
+            if (itemId == R.id.homeitem) {
+                Intent intent =new Intent(medicine.this,HomePage.class);
+                startActivity(intent);
+                return true;
+            } else if (itemId == R.id.profileitem) {
+                Intent intent1 =new Intent(medicine.this,UserProfile.class);
+                startActivity(intent1);
+                return true;
+            }
+            return false;
+        }*/
+
 }
