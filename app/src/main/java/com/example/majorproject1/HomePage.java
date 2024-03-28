@@ -6,8 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.drawerlayout.widget.DrawerLayout;
-
-import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -20,7 +18,8 @@ import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
-public class HomePage extends AppCompatActivity {
+
+public class HomePage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -47,8 +46,10 @@ public class HomePage extends AppCompatActivity {
         setSupportActionBar(toolbar);
        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout,toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
        drawerLayout.addDrawerListener(toggle);
-        //toolbar.setLogo(R.drawable.menu);
         toggle.syncState();
+        //toolbar.setLogo(R.drawable.menu);
+
+
 
         // Set up click listeners for various UI elements
         diabeticsCardView.setOnClickListener(new View.OnClickListener() {
@@ -71,7 +72,7 @@ public class HomePage extends AppCompatActivity {
         recoveryCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle click on Recovery
+                // Handle click on Recovery v 
                 Toast.makeText(HomePage.this, "Recovery Clicked", Toast.LENGTH_SHORT).show();
                 // Add your logic here
             }
@@ -99,7 +100,7 @@ public class HomePage extends AppCompatActivity {
 
                         return true;
                     } else if (itemId == R.id.bellitem) {
-                        Intent intent =new Intent(HomePage.this,notifications_Activity.class);
+                        Intent intent =new Intent(HomePage.this,medicine.class);
                         startActivity(intent);
                         return true;
                     } else if (itemId == R.id.profileitem) {
@@ -110,5 +111,16 @@ public class HomePage extends AppCompatActivity {
                     return false;
             }
         });
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == R.id.MedRem)
+        {
+            Intent intent =new Intent(HomePage.this,medicine.class);
+            startActivity(intent);
+            return true;
+        }
+        return false;
     }
 }

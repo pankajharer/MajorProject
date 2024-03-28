@@ -22,10 +22,6 @@ public class MainActivity extends AppCompatActivity {
     private EditText usernameEditText;
     private EditText passwordEditText;
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -33,10 +29,21 @@ public class MainActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+
         usernameEditText = findViewById(R.id.username);
         passwordEditText = findViewById(R.id.pass);
         Button loginButton = findViewById(R.id.btnlogin);
         TextView signup=findViewById(R.id.signup);
+
+        TextView forgotPasswordTextView = findViewById(R.id.forgot);
+        forgotPasswordTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,ForgotPass.class);
+                startActivity(intent);
+
+            }
+        });
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override

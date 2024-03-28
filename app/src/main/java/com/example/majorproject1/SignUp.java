@@ -19,7 +19,6 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         setContentView(R.layout.activity_sign_up);
 
         usernameEditText = findViewById(R.id.username);
@@ -65,7 +64,8 @@ public class SignUp extends AppCompatActivity {
             showToast("Sign up successful!");
             ConnectionHelper con = new ConnectionHelper(this);
             con.addUser(username, password, phoneSet);
-
+            Intent intent =new Intent(SignUp.this,LoginModel.class);
+            startActivity(intent);
         }
     }
 

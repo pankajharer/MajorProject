@@ -34,7 +34,7 @@ public class UserProfile extends AppCompatActivity {
                     startActivity(intent);
                     return true;
                 } else if (itemId == R.id.bellitem) {
-                    Intent intent1 =new Intent(UserProfile.this,notifications_Activity.class);
+                    Intent intent1 =new Intent(UserProfile.this,NotificationHelper.class);
                     startActivity(intent1);
                     return true;
                 } else if (itemId == R.id.profileitem) {

@@ -43,11 +43,15 @@ public class ConnectionHelper extends SQLiteOpenHelper{
                     "weight TEXT," +
                     "gender TEXT" +
                     ")");
+
+
         }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
            db.execSQL("DROP TABLE IF EXISTS "+TABLE_LOGIN);
+           onCreate(db);
+           db.execSQL("DROP TABLE IF EXISTS " + "medicine");
            onCreate(db);
     }
 
@@ -66,6 +70,8 @@ public class ConnectionHelper extends SQLiteOpenHelper{
         return userId;
 
     }
+
+
 
     public ArrayList<LoginModel> fetchUser()
     {

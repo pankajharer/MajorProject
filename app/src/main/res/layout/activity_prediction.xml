@@ -10,6 +10,7 @@
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_marginTop="70dp"
     android:text="Enter Blood Glucose Level:"
     android:textSize="18sp" />
 
@@ -21,9 +22,9 @@
     android:inputType="numberDecimal" />
 
 <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="16dp"
+    android:layout_width="150dp"
+    android:layout_height="40dp"
+    android:layout_marginTop="40dp"
     android:text="Select Timing:"
     android:textSize="18sp" />
 
@@ -33,11 +34,41 @@
     android:layout_height="50dp"
     android:entries="@array/timing_array" />
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Enter Insulin Level:"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/insulin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Insulin"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Enter BMI"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/BMI"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="BMI"
+        android:inputType="numberDecimal" />
+
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
         android:id="@+id/button"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
         android:onClick="checkStatus"
         android:text="Check Status" />
 
