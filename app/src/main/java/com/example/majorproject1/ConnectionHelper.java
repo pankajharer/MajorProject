@@ -35,17 +35,16 @@ public class ConnectionHelper extends SQLiteOpenHelper{
                     KEY_PHONE + " TEXT" +
                     ")");
 
-            db.execSQL("CREATE TABLE user_info(" +
-                    "id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                    "user_id INTEGER," +
-                    "name TEXT," +
-                    "age TEXT," +
-                    "weight TEXT," +
-                    "gender TEXT" +
-                    ")");
+            db.execSQL("CREATE TABLE user_info (" +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "user_id INTEGER, " +
+                "name TEXT, " +
+                "age TEXT, " +
+                "weight TEXT, " +
+                "gender TEXT" +
+                ")");
 
-
-        }
+    }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
