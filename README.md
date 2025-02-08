@@ -22,8 +22,8 @@ This Android application leverages **Machine Learning (ML) and Artificial Intell
 ## 📌 Installation & Setup  
 ### Clone the Repository  
 ```bash
-git clone https://github.com/your-username/diabetes-monitoring-app.git
-cd diabetes-monitoring-app
+git clone https://github.com/pankajharer/MajorProject.git
+
 ```
 ### Screenshots
 ![WhatsApp Image 2025-02-08 at 20 36 24_3153dd9c](https://github.com/user-attachments/assets/21d77be1-cb26-4f22-82a4-2c535d69fd17)
